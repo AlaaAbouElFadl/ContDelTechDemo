@@ -7,7 +7,7 @@ Dieses Projekt ist eine einfache Taschenrechner-Demo, die als Tech-Demo für Con
 - Unit Tests mit Jest
 - Dokumentation und Checkliste für den Fortschritt
 
-## Setup
+## Setup und Installation
 1. Repository klonen:
    ```bash
    git clone <repository-url>
@@ -16,7 +16,7 @@ Dieses Projekt ist eine einfache Taschenrechner-Demo, die als Tech-Demo für Con
    npm install
 3. Anwendung starten:
    ```bash
-   live-server public
+   node src/app.js
 4. Tests ausführen:
    ```bash
    npm test

@@ -1,27 +1,15 @@
-bdocument.addEventListener("DOMContentLoaded", () => {
-    const resultField = document.getElementById("result");
-    let currentInput = "";
-  
-    document.querySelectorAll(".btn").forEach(button => {
-      button.addEventListener("click", () => {
-        const value = button.getAttribute("data-value");
-  
-        if (value === "=") {
-          try {
-            currentInput = eval(currentInput); // Achtung: Eval hat Sicherheitsrisiken, nur für Demo-Zwecke verwenden.
-            resultField.value = currentInput;
-          } catch (e) {
-            resultField.value = "Error";
-            currentInput = "";
-          }
-        } else if (value === "C") {
-          currentInput = "";
-          resultField.value = "";
-        } else {
-          currentInput += value;
-          resultField.value = currentInput;
-        }
-      });
-    });
-  });
-  
+
+const express = require("express");
+const path = require("path");
+const app = express();
+const PORT = 8080;
+
+app.use(express.static(path.join(__dirname, "../public")));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/index.html"));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
