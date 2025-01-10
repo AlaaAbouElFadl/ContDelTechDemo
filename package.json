@@ -1,7 +1,10 @@
 {
   "name": "contdeltechdemo",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/app.js",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
     "start": "node src/app.js",
     "test": "jest"
@@ -9,12 +12,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "directories": {
-    "test": "tests"
-  },
-  "description": "",
   "dependencies": {
-    "express": "^4.21.2",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
     "jest": "^29.7.0"
   }
 }
