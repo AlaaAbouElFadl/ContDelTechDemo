@@ -3,7 +3,7 @@
 ### Einführung und Grundlagen
 - [x] Verständnis von Continuous Delivery und dessen Bedeutung
 - [x] Unterschiede zwischen Continuous Integration, Continuous Delivery und Continuous Deployment
-- [ ] CI-Anti Pattern identifizieren
+- [x] CI-Anti Pattern identifizieren
 
 ### 20% Projekt Setup
 - [x] Initialisierung des Repository (Git) -> (Blank Project + Project Name = nachname) 
@@ -30,7 +30,7 @@
 
 ### 10% Containerisierung
 - [x] Docker oder ähnliche Technologien eingesetzt
-- [ ] Integration in eine Build-Pipeline
+- [x] Integration in eine Build-Pipeline
 
 ### 20% Infrastruktur- und Konfigurationsmanagement
 - [ ] Template Konfigurationsdateien versioniert und zentralisiert
