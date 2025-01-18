@@ -11,11 +11,11 @@
 - [x] Checkliste versionieren
 - [x] README anfertigen mit Verlinkungen, Hinweisen, etc. zum Inhalt des Repository
 - [x] zweites Repository für Übungen, Ausprobieren, etc. inkl. README sowie Verlinkungen und Übersicht zu den Übungen
-- [ ] .gitignore angepasst: Stelle sicher, dass unnötige Dateien nicht im Repository landen (z. B. durch ein angepasstes .gitignore-File).
+- [x] .gitignore angepasst: Stelle sicher, dass unnötige Dateien nicht im Repository landen (z. B. durch ein angepasstes .gitignore-File).
 
 ### 10% Automatisierung
-- [ ] Automatisierte Builds eingerichtet
-- [ ] Automatisierte Tests implementiert
+- [x] Automatisierte Builds eingerichtet
+- [x] Automatisierte Tests implementiert
 - [ ] Automatisierte Deployments konfiguriert
 - [ ] Automatisierte Code-Qualitätsanalyse: Setze statische Code-Analyse-Tools ein, um Codequalität automatisiert zu überprüfen.
 
@@ -29,7 +29,7 @@
 - [ ] Rollback-Strategien (optional)
 
 ### 10% Containerisierung
-- [ ] Docker oder ähnliche Technologien eingesetzt
+- [x] Docker oder ähnliche Technologien eingesetzt
 - [ ] Integration in eine Build-Pipeline
 
 ### 20% Infrastruktur- und Konfigurationsmanagement

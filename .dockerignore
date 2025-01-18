@@ -1,0 +1,7 @@
+# Dateien und Verzeichnisse ausschließen, die nicht im Image benötigt werden
+node_modules
+npm-debug.log
+coverage
+.env
+.vscode
+*.log

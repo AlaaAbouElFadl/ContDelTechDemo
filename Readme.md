@@ -5,6 +5,7 @@ Dieses Projekt ist eine einfache Taschenrechner-Demo, die als Tech-Demo für Con
 - Eine Node.js-Anwendung
 - Frontend-Integration mit HTML, CSS und JavaScript
 - Unit Tests mit Jest
+- Containerisierung mit Docker
 - Dokumentation und Checkliste für den Fortschritt
 
 ## Setup und Installation
@@ -22,6 +23,16 @@ Dieses Projekt ist eine einfache Taschenrechner-Demo, die als Tech-Demo für Con
    npm test
 ----------------------------------------------------------------
 
+## Containerisierung mit Docker
+1. Docker-Image bauen im Root-Verzeichnis deines Projekts:
+   ```bash
+   docker build -t contdeltechdemo .
+2. Docker-Container starten:
+   ```bash
+      docker run -p 8080:8080 contdeltechdemo
+2. Anwendung testen:
+
+Öffne einen Browser und rufe http://localhost:8080 auf, um sicherzustellen, dass die Anwendung läuft.
 
 ## Repos für Übungen
 
