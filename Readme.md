@@ -21,7 +21,21 @@ Dieses Projekt ist eine einfache Taschenrechner-Demo, die als Tech-Demo für Con
 4. Tests ausführen:
    ```bash
    npm test
+5. Code-Qualitätsprüfung mit ESLint:
+   ```bash
+   npm run lint
 ----------------------------------------------------------------
+
+## Automatisierte Code-Qualitätsanalyse
+
+### ESLint-Setup
+1. Installation und konfigurieren von ESLint:
+2. Code-Qualität lokal prüfen:
+   ```bash
+   npm run lint
+3. Integration in GitHub Actions:
+ESLint ist in die CI-Pipeline integriert und wird bei jedem Push automatisch ausgeführt, um die Code-Qualität zu gewährleisten.
+
 
 ## Containerisierung mit Docker
 1. Docker-Image bauen im Root-Verzeichnis deines Projekts:

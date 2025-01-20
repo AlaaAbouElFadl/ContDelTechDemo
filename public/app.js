@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
           try {
             currentInput = eval(currentInput); 
             resultField.value = currentInput;
-          } catch (e) {
+          } catch {
             resultField.value = "Error";
             currentInput = "";
           }

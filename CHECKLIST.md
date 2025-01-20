@@ -17,7 +17,7 @@
 - [x] Automatisierte Builds eingerichtet
 - [x] Automatisierte Tests implementiert
 - [ ] Automatisierte Deployments konfiguriert
-- [ ] Automatisierte Code-Qualitätsanalyse: Setze statische Code-Analyse-Tools ein, um Codequalität automatisiert zu überprüfen.
+- [x] Automatisierte Code-Qualitätsanalyse: Setze statische Code-Analyse-Tools ein, um Codequalität automatisiert zu überprüfen.
 
 ### 10% Testing
 - [x] (Unit) Tests geschrieben und automatisiert
