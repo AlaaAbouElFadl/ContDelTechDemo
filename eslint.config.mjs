@@ -13,6 +13,10 @@ export default [
         ...globals.jest,
       },
     },
+    rules: {
+      "no-unused-vars": "warn",       
+      "no-undef": "error",           
+    },
   },
   pluginJs.configs.recommended,
 ];
