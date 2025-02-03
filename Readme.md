@@ -8,6 +8,15 @@ Dieses Projekt ist eine einfache Taschenrechner-Demo, die als Tech-Demo für Con
 - Containerisierung mit Docker
 - Dokumentation und Checkliste für den Fortschritt
 
+## Technologien
+- **Node.js** – Serverseitige JavaScript-Laufzeitumgebung
+- **Express.js** – Minimalistisches Backend-Framework für Node.js
+- **Jest** – JavaScript-Testing-Framework für Unit-Tests
+- **Docker** – Containerisierung für eine einheitliche Umgebung
+- **GitHub Actions** – CI/CD-Tool für Automatisierung
+- **ESLint** – Statische Code-Analyse für Code-Qualität
+
+
 ## Setup und Installation
 1. Repository klonen:
    ```bash
@@ -47,6 +56,11 @@ ESLint ist in die CI-Pipeline integriert und wird bei jedem Push automatisch aus
 2. Anwendung testen:
 
 Öffne einen Browser und rufe http://localhost:8080 auf, um sicherzustellen, dass die Anwendung läuft.
+
+## Dokumentation
+Siehe: [Branching-Strategie Dokumentation](docs/branching-strategy.md)
+
+Siehe: [CI/CD-Pipeline Dokumentation](docs/cicd-pipeline.md)
 
 ## Repos für Übungen
 
