@@ -56,7 +56,7 @@ jobs:
         run: npm test
 
       - name: Build Docker Image
-        run: docker build -t contdeltechdemo .
+        run: docker build -t abouelfadl-techdemo .
 ```
 # Build Pipeline Spezifikation
 
@@ -103,7 +103,7 @@ Erklärung: Führt Unit-Tests mit Jest aus, um sicherzustellen, dass der Code fu
 ## 6- Build-Schritt
 ```yaml
 - name: Build Docker Image
-  run: docker build -t contdeltechdemo .
+  run: docker build -t abouelfadl-techdemo .
  ```
 Erklärung: Erstellt ein Docker-Image der Anwendung.
 
@@ -137,8 +137,8 @@ npm test
 
 **Docker-Befehle zur manuellen Prüfung:**  
 ```bash
-docker build -t contdeltechdemo .
-docker run -p 3000:3000 contdeltechdemo
+docker build -t abouelfadl-techdemo .
+docker run -p 3000:3000 abouelfadl-techdemo
 ```
 
 

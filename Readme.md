@@ -49,10 +49,10 @@ ESLint ist in die CI-Pipeline integriert und wird bei jedem Push automatisch aus
 ## Containerisierung mit Docker
 1. Docker-Image bauen im Root-Verzeichnis deines Projekts:
    ```bash
-   docker build -t contdeltechdemo .
+   docker build -t abouelfadl-techdemo .
 2. Docker-Container starten:
    ```bash
-      docker run -p 8080:8080 contdeltechdemo
+      docker run -p 8080:8080 abouelfadl-techdemo
 2. Anwendung testen:
 
 Öffne einen Browser und rufe http://localhost:8080 auf, um sicherzustellen, dass die Anwendung läuft.

@@ -1,4 +1,4 @@
-# Branching-Strategie für ContDelTechDemo
+# Branching-Strategie für abouelfadl-techdemo
 
 ## Übersicht
 Diese Repository verwendet eine einfache Branching-Strategie, da es sich um ein kleines, einzelnes Projekt handelt.
