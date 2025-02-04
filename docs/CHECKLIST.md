@@ -16,7 +16,7 @@
 ### 10% Automatisierung
 - [x] Automatisierte Builds eingerichtet
 - [x] Automatisierte Tests implementiert
-- [ ] Automatisierte Deployments konfiguriert
+- [X] Automatisierte Deployments konfiguriert
 - [x] Automatisierte Code-Qualitätsanalyse: Setze statische Code-Analyse-Tools ein, um Codequalität automatisiert zu überprüfen.
 
 ### 10% Testing
@@ -25,8 +25,8 @@
 - [ ] End-to-End Tests eingerichtet (optional)
 
 ### Deployment-Strategien
-- [ ] Deployment-Strategien identifizieren
-- [ ] Rollback-Strategien (optional)
+- [X] Deployment-Strategien identifizieren
+- [X] Rollback-Strategien (optional)
 
 ### 10% Containerisierung
 - [x] Docker oder ähnliche Technologien eingesetzt
@@ -35,11 +35,11 @@
 ### 20% Infrastruktur- und Konfigurationsmanagement
 - [X] Template Konfigurationsdateien versioniert und zentralisiert
 - [X] Konfigurationsdateien ausgenommen
-- [ ] Verwendung in einer Build-Pipeline
+- [X] Verwendung in einer Build-Pipeline
 - [ ] Infrastructure as Code (IaC): Nutze Tools wie Terraform oder Ansible, um die Infrastruktur als Code zu verwalten und sicherzustellen, dass Deployments wiederholbar sind.
 
 ### 10% Sicherheit
-- [ ] Zugangsdaten sicher hinterlegt
+- [X] Zugangsdaten sicher hinterlegt
 - [ ] Sicherheitsüberprüfungen: Integriere automatisierte Sicherheitstests (z. B. OWASP ZAP) in die Pipeline, um potenzielle Sicherheitslücken frühzeitig zu erkennen.
 
 ### Datenbanken

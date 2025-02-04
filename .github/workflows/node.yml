@@ -31,5 +31,14 @@ jobs:
       run: npm test
 
     - name: Build Docker image
-      run: docker build -t abouelfadl-techdemo .
+      run: docker build -t alaaabou/abouelfadl-techdemo .
 
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKER_HUB_USERNAME }}
+        password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+  
+
+    - name: Push Docker Image
+      run: docker push alaaabou/abouelfadl-techdemo:latest

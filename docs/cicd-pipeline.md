@@ -56,7 +56,16 @@ jobs:
         run: npm test
 
       - name: Build Docker Image
-        run: docker build -t abouelfadl-techdemo .
+        run: docker build -t alaaabou/abouelfadl-techdemo .
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+    
+      - name: Push Docker Image
+        run: docker push alaaabou/abouelfadl-techdemo:latest
 ```
 # Build Pipeline Spezifikation
 
@@ -103,9 +112,22 @@ Erklärung: Führt Unit-Tests mit Jest aus, um sicherzustellen, dass der Code fu
 ## 6- Build-Schritt
 ```yaml
 - name: Build Docker Image
-  run: docker build -t abouelfadl-techdemo .
+  run: docker build -t alaaabou/abouelfadl-techdemo .
  ```
 Erklärung: Erstellt ein Docker-Image der Anwendung.
+
+## 7- Deployment auf AWS EC2
+```yaml
+- name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+    
+  - name: Push Docker Image
+    run: docker push alaaabou/abouelfadl-techdemo:latest
+ ```
+Erklärung: Loggt sich in Docker Hub ein und lädt das Docker-Image hoch, damit es später auf AWS EC2 genutzt werden kann.
 
 ----------------------------------------------------------------
 # Erläuterung der CI/CD Schritte
@@ -141,7 +163,6 @@ docker build -t abouelfadl-techdemo .
 docker run -p 3000:3000 abouelfadl-techdemo
 ```
 
-
 ### 4. CI/CD-Pipeline in GitHub Actions
 Die .github/workflows/node.yml Datei steuert die Automatisierung.
 
@@ -162,11 +183,39 @@ Nach jedem Push oder Pull Request kann der CI/CD-Status in GitHub Actions überp
 - Suche den neuesten Workflow-Run.
 - Falls Fehler auftreten, überprüfe die Logs und korrigiere den Code.
 
+### 6. Deployment auf AWS EC2
+
+1. Docker-Image zu Docker Hub pushen
+  ```bash
+  docker login
+  docker build -t alaaabou/abouelfadl-techdemo:latest .
+  docker push alaaabou/abouelfadl-techdemo:latest
+  ```
+2. AWS EC2 Instanz starten
+3. Mit AWS EC2 verbinden
+  ```bash
+  ssh -i <dein-key.pem> ec2-user@<EC2-PUBLIC-IP>
+  ```
+4. Docker installieren & Container starten
+  
+5. Docker-Image auf AWS EC2 startenv
+
+  ```bash
+  ssh -i <dein-key.pem> ec2-user@<EC2-PUBLIC-IP>
+  ```
+
+6. Anwendung testen
+  ```bash
+  http://<EC2-PUBLIC-IP>
+  ```
+
 
 ### Fazit
 Diese CI/CD-Pipeline automatisiert:
 - **Linting für Code-Qualität**
 - **Automatische Tests mit Jest**
 - **Containerisierung mit Docker**
+- **Deployment auf Docker Hub**
+- **Einfache Bereitstellung auf AWS EC2**
 
 

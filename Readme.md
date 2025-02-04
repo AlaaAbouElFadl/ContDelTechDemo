@@ -9,12 +9,12 @@ Dieses Projekt ist eine einfache Taschenrechner-Demo, die als Tech-Demo für Con
 - Dokumentation und Checkliste für den Fortschritt
 
 ## Technologien
-- **Node.js** – Serverseitige JavaScript-Laufzeitumgebung
-- **Express.js** – Minimalistisches Backend-Framework für Node.js
-- **Jest** – JavaScript-Testing-Framework für Unit-Tests
-- **Docker** – Containerisierung für eine einheitliche Umgebung
-- **GitHub Actions** – CI/CD-Tool für Automatisierung
-- **ESLint** – Statische Code-Analyse für Code-Qualität
+- **Node.js** - Serverseitige JavaScript-Laufzeitumgebung
+- **Express.js** - Minimalistisches Backend-Framework für Node.js
+- **Jest** - JavaScript-Testing-Framework für Unit-Tests
+- **Docker** - Containerisierung für eine einheitliche Umgebung
+- **GitHub Actions** - CI/CD-Tool für Automatisierung
+- **ESLint** - Statische Code-Analyse für Code-Qualität
 
 
 ## Setup und Installation
@@ -56,6 +56,48 @@ ESLint ist in die CI-Pipeline integriert und wird bei jedem Push automatisch aus
 2. Anwendung testen:
 
 Öffne einen Browser und rufe http://localhost:8080 auf, um sicherzustellen, dass die Anwendung läuft.
+
+## Deployment auf AWS EC2
+1. Docker-Image zu Docker Hub pushen
+
+Befehl zum Einloggen in Docker Hub:
+   ```bash
+   docker login
+   ```
+   ```bash
+   docker build -t alaaabou/abouelfadl-techdemo:latest .
+   ```
+   ```bash
+   docker push alaaabou/abouelfadl-techdemo:latest
+   ```
+
+   
+2. AWS EC2 Instanz starten
+
+
+3. Auf AWS EC2 verbinden
+   ```bash
+   ssh -i <dein-key.pem> ec2-user@<EC2-PUBLIC-IP>
+   ```
+
+4. Docker installieren & Container starten
+
+- Docker installieren 
+- Docker-Image von Docker Hub ziehen
+   ```bash
+   docker pull alaaabou/abouelfadl-techdemo:latest
+   ```
+- Container starten
+   ```bash
+   docker run -d -p 80:3000 alaaabou/abouelfadl-techdemo:latest
+   ```
+
+- Öffne http://**[EC2-PUBLIC-IP]** im Browserum zu überprüfen
+
+### AWS Deployment für alle sichtbar 
+(nur wenn meine EC instanz läuft)
+
+http://18.199.225.167
 
 ## Dokumentation
 Siehe: [Branching-Strategie Dokumentation](docs/branching-strategy.md)
